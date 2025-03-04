@@ -16,6 +16,7 @@
   --font-syne: "Syne", sans-serif;
   
   --font-size-20: clamp(1.5rem, 1vw, 2rem);
+  --font-size-30: clamp(2rem, 1.5vw, 3rem);
 }
 
 html {
@@ -25,6 +26,11 @@ html {
 
 body {
   width: 100%;
+  background-color: var(--color-principal);
+}
+
+span {
+  color: var(--color-seccundario);
 }
 
 header {
@@ -44,7 +50,7 @@ header nav {
 header nav a {
   font-family: var(--font-museo-moderno);
   font-weight: 600;
-  font-size: var(--font-size-20);
+  font-size: 2rem;
   font-optical-sizing: auto;
   color: var(--color-seccundario);
 }
@@ -52,4 +58,92 @@ header nav a {
 header nav a:hover {
   border-bottom: .2rem solid var(--color-seccundario);
   color: var(--color-blanco);
+}
+
+.home {
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  gap: 5%;
+}
+
+.home > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+.home-img {
+  width: clamp(25rem, 30%, 30rem);
+}
+
+.home-img img {
+  width: 100%;
+}
+
+.home-about {
+  font-family: var(--font-museo-moderno);
+  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-optical-sizing: auto;
+  color: var(--color-blanco);
+}
+
+.home-about {
+  font-size: var(--font-size-30);
+  font-weight: 700;
+}
+
+.home-about p {
+  max-width: 60ch;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  column-gap: 2%;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.links a, button {
+  border-radius: 50%;
+  padding: 1%;
+  font-size: 2rem;
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+  border: .1rem solid var(--color-seccundario);
+  cursor: pointer;
+}
+
+.links button:focus {
+  outline: none;
+}
+
+@media (max-width: 400px) {
+  .home {
+    padding-top: 31%;
+  }
+}
+
+.boton {
+  font-family: var(--font-syne);
+  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-optical-sizing: auto;
+  color: var(--color-blanco);
+  padding: 0.5% 1%;
+  border: 1px solid var(--color-seccundario);
+  border-radius: 3.2rem;
+  background-color: var(--color-principal);
+}
+
+.boton:hover, .links a:hover, .links button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 .5rem var(--color-seccundario);
+  transition: .3s;
 }

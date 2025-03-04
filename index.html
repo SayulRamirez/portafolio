@@ -5,30 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saúl Ramírez</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        function copyEmail() {
+            var email = "tuemail@example.com";
+            navigator.clipboard.writeText(email).then(function() {
+                alert("Correo electrónico copiado: " + email);
+            }, function(err) {
+                console.error("No se pudo copiar el texto: ", err);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#home">Inicio</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#experience">Experiencia</a>
-            <a href="#certificates">Certificados</a>
-            <a href="#skills">Habilidades</a>
+            <a href="#home" title="Inicio"><i class='bx bx-home'></i></a>
+            <a href="#projects" title="Proyectos"><i class='bx bx-hard-hat'></i></a>
+            <a href="#experience" title="Experiencia"><i class='bx bxs-business'></i></a>
+            <a href="#certificates" title="Certificados"><i class='bx bx-certification' ></i></a>
+            <a href="#skills" title="Habilidades"><i class='bx bx-brain'></i></a>
         </nav>
     </header>
     <main>
         <section class="home" id="home">
-            <div class="home-img">
-                <img src="images/20240920_180524.jpg" alt="Imagen de Saúl Ramírez">
+            <div>
+                <div class="home-img">
+                    <img src="images/20240920_180524.jpg" alt="Imagen de Saúl Ramírez">
+                </div>
+                <div class="home-about">
+                    <h1><span>Saúl Ramirez</span></h1>
+                    <p>Soy un apasionado <span>desarrollador backend</span> en búsqueda de 
+                        nuevas  oportunidades para demostrar y perfeccionar mis 
+                        habilidades.  A lo largo de mi trayectoria, he ocupado diversos 
+                        cargos que han fortalecido mis competencias interpersonales. 
+                        Ahora, busco iniciar mi carrera formalmente como desarrollador 
+                        backend, aportando mis conocimientos en estas tecnologías y 
+                        mi capacidad para trabajar en equipo.</p>
+                </div>
             </div>
-            <h1><span>Saúl Ramirez</span></h1>
-            <p>Soy un apasionado <span>desarrollador backend</span> en búsqueda de 
-                nuevas  oportunidades para demostrar y perfeccionar mis 
-                habilidades.  A lo largo de mi trayectoria, he ocupado diversos 
-                cargos que han fortalecido mis competencias interpersonales. 
-                Ahora, busco iniciar mi carrera formalmente como desarrollador 
-                backend, aportando mis conocimientos en estas tecnologías y 
-                mi capacidad para trabajar en equipo.</p>
+            <div class="links">
+                <a href="https://drive.google.com/file/d/1OmuUSnj3Bia8vtw8J6w3uRCwpYUWX3wq/view?usp=drive_link" 
+                    target="_blank" title="Obten mi CV"><i class='bx bxs-file-pdf' ></i></a>
+                <button onclick="copyEmail()" title="Copiar mi email"><i class='bx bx-envelope'></i></button>
+                <a href="https://www.linkedin.com/in/sayul-ramirez/" 
+                    target="_blank" title="Visita mi LinkedIn"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/SayulRamirez" target="_blank" title="Visita mi GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://wa.me/524771559570?text=Hola%20Saúl,%20me%20gustaría%20tener%20una%20entrevista%20." 
+                    target="_blank" title="Haz clic para contactarme en WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+            </div>
         </section>
     </main>
 </body>
