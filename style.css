@@ -33,6 +33,10 @@ span {
   color: var(--color-seccundario);
 }
 
+main {
+  padding-top: 7rem;
+}
+
 header {
   width: 100%;
   z-index: 100;
@@ -61,24 +65,23 @@ header nav a:hover {
 }
 
 .home {
-  padding: 0 7%;
+  padding: 5% 7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  gap: 5%;
+  gap: 2rem;
 }
 
 .home > div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
 .home-img {
-  width: clamp(25rem, 30%, 30rem);
+  width: clamp(20rem, 25%, 40rem);
 }
 
 .home-img img {
@@ -105,7 +108,7 @@ header nav a:hover {
 .links {
   display: flex;
   justify-content: center;
-  column-gap: 2%;
+  column-gap: 4rem;
   row-gap: 1rem;
   flex-wrap: wrap;
 }
@@ -124,12 +127,6 @@ header nav a:hover {
   outline: none;
 }
 
-@media (max-width: 400px) {
-  .home {
-    padding-top: 31%;
-  }
-}
-
 .boton {
   font-family: var(--font-syne);
   font-weight: 600;
@@ -144,6 +141,6 @@ header nav a:hover {
 
 .boton:hover, .links a:hover, .links button:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 .5rem var(--color-seccundario);
+  box-shadow: 0 0 .8rem var(--color-seccundario);
   transition: .3s;
 }
